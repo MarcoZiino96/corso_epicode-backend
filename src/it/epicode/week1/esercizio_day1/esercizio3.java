@@ -28,20 +28,6 @@ public class esercizio3 {
         double l3 = scanner.nextDouble();
         System.out.println("L'area del trinagolo è:");
         System.out.println(areaTriangolo(l1,l2,l3));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     // come calcolare il perimetro di un rettangolo
