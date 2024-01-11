@@ -2,7 +2,7 @@ package it.epicode.week1.esercizio_day4;
 
 public class Dipendente {
 
-    private double stipendioBase = 1000;
+    public final static double stipendioBase = 1000;
     private String matricola;
 
     private double stipendio;
@@ -10,9 +10,9 @@ public class Dipendente {
     private TipoLivello livello;
     private TipoDipartimento dipartimento;
 
-    public Dipendente(double stipendioBase, String matricola, double stipendio, double importoOrarioStraordinario, TipoLivello livello, TipoDipartimento dipartimento) {
+    public Dipendente( String matricola, double stipendio, double importoOrarioStraordinario, TipoLivello livello, TipoDipartimento dipartimento) {
 
-        this.stipendioBase = stipendioBase;
+
         this.matricola = matricola;
         this.stipendio = stipendio;
         this.importoOrarioStraordinario = importoOrarioStraordinario;
@@ -24,7 +24,7 @@ public class Dipendente {
         this.matricola = matricola;
         this.dipartimento = dipartimento;
         this.stipendio = stipendioBase;
-        this.importoOrarioStraordinario = importoOrarioStraordinario;
+        this.importoOrarioStraordinario = 30;
         this.livello = TipoLivello.OPERAIO;
     }
 
@@ -58,11 +58,20 @@ public class Dipendente {
     }
 
     public void stampaDatiDipendente() {
-        System.out.println("Stipendio:" + stipendioBase);
-        System.out.println("Matricola:" + matricola);
-        System.out.println("Importo orario straordinario:" + importoOrarioStraordinario);
-        System.out.println("Livello" + livello);
-        System.out.println("Dipartimento:" + dipartimento);
+        System.out.println(this);
+
+    }
+
+    @Override
+    public String toString() {
+        return "Dipendente{" +
+                "stipendioBase=" + stipendioBase +
+                ", matricola='" + matricola + '\'' +
+                ", stipendio=" + stipendio +
+                ", importoOrarioStraordinario=" + importoOrarioStraordinario +
+                ", livello=" + livello +
+                ", dipartimento=" + dipartimento +
+                '}';
     }
 
     public TipoLivello promuovi() {
@@ -71,15 +80,15 @@ public class Dipendente {
 
             case OPERAIO:
                 livello = TipoLivello.IMPIEGATO;
-                stipendioBase = stipendioBase * 1.2;
+                stipendio = stipendioBase * 1.2;
                 return livello;
             case IMPIEGATO:
                 livello = TipoLivello.QUADRO;
-                stipendioBase = stipendioBase * 1.5;
+                stipendio = stipendioBase * 1.5;
                 return livello;
             case QUADRO:
                 livello = TipoLivello.DIRIGENTE;
-                stipendioBase = stipendioBase * 2;
+                stipendio = stipendioBase * 2;
                 return livello;
             case DIRIGENTE:
                 System.out.println("Sei gia al livello massimo,non puoi essere promosso");
