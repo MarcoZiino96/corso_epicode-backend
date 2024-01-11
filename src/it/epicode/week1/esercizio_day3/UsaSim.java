@@ -5,18 +5,23 @@ import java.util.Scanner;
 public class UsaSim {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Crea una sim,inserisci un numero di telefono:");
+        Sim sim = new Sim(23987123);
 
-        int number = scanner.nextInt();
-        Sim sim1 = new Sim(number);
+        sim.setCredit(15);
 
-        System.out.println("Sim creata.");
-        System.out.println("ricarica la tua sim, inserisci un importo:");
-        int ricarica = scanner.nextInt();
-        sim1.setCredit(ricarica);
-        System.out.println("ricarica effettuata, credito rediduo di:" + sim1.getCredit());
+        System.out.println(sim.telefonata(30, 555444555));
+        System.out.println(sim.telefonata( 60, 87934534));
+        System.out.println(sim.telefonata(30,873232322 ));
+        sim.stampaDatiSim();
 
+        System.out.println(sim.telefonata(30,87934534 ));
+        System.out.println(sim.telefonata(10,87934534 ));
+        System.out.println(sim.telefonata(10,87934534 ));
+        System.out.println(sim.telefonata(20,45879856 ));
+        System.out.println(sim.telefonata(20,878657654 ));
+        System.out.println(sim.telefonata(20,878657653 ));
+
+        sim.stampaDatiSim();
 
 
     }
