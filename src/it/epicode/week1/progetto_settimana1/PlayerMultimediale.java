@@ -2,15 +2,19 @@ package it.epicode.week1.progetto_settimana1;
 
  public abstract class PlayerMultimediale{
 
-     private TipoTitolo titolo;
+     private String titolo;
 
-     public PlayerMultimediale(TipoTitolo titolo){
+     public PlayerMultimediale(String titolo){
          this.titolo = titolo;
      }
 
-
-     public TipoTitolo getTitolo(){
+     public String getTitolo(){
          return titolo;
      }
+
+
+     public abstract void print();
+
+     public abstract void execution();
 
  }

@@ -2,11 +2,13 @@ package it.epicode.week1.progetto_settimana1;
 
 public class Audio extends  PlayerMultimediale implements  Riproducible{
     private int volume = 8;
-    public Audio (TipoTitolo titolo){
-        super(titolo = titolo);
+    public Audio (String titolo){
+        super(titolo);
     }
 
-
+    public int getVolume() {
+        return volume;
+    }
 
     public void play(){
 
@@ -20,23 +22,39 @@ public class Audio extends  PlayerMultimediale implements  Riproducible{
         }
     }
 
+    public void execution() {
+        play();
+    }
 
-    public void alzaVolume(){
-        if (volume >= 0 && volume<10){
-           volume +=  1;
-            System.out.println("Titolo:"+getTitolo()+": il volume ora è a :" +  volume);
-        }else{
+    public void alzaVolume() {
+        if (volume ==10){
             System.out.println("Titolo:"+getTitolo()+": il volume è al massimo");
-
+        }else{
+            volume +=  1;
+            System.out.println("Titolo:"+getTitolo()+": il volume ora è a :" +  volume);
         }
     }
 
-    public void abassaVolume(){
-        if (volume <= 10 && volume > 0){
+    public void abassaVolume() {
+        if (volume == 0){
+            System.out.println("Titolo:"+getTitolo()+": il volume è al minimo");
+        } else{
             volume -= 1;
             System.out.println("Titolo:"+getTitolo()+": il volume ora è a :" +  volume);
-        } else{
-            System.out.println("Titolo:"+getTitolo()+": il volume è al minimo");
         }
+    }
+
+
+    public void print() {
+        System.out.println(this);
+    }
+
+    @Override
+    public String toString() {
+        return "Audio{" +
+                "titolo=" + getTitolo()+","+
+                "volume=" + volume +","+
+                "durata=" + durata+
+                '}';
     }
 }
