@@ -30,4 +30,5 @@ public class GestioneDipendenti {
         }
         System.out.println(somma);
     }
+
 }
