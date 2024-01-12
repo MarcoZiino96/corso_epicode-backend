@@ -14,18 +14,20 @@ public class Esecuzione{
         img.abassaLuminosita();
         img.alzaLuminosita();
 
+
         Audio audio = new Audio("vocale");
+        audio.print();
         audio.abassaVolume();
         audio.alzaVolume();
-        audio.print();
+
 
         Video video = new Video("corso epicode");
-
+        video.print();
         video.alzaLuminosita();
         video.abassaLuminosita();
         video.alzaVolume();
         video.abassaVolume();
-        video.print();
+
 
 
 
@@ -60,6 +62,7 @@ public class Esecuzione{
         System.out.println("Inserisci un numero da 1 a 5 per eseguire il file Multimediale 0 zero per uscire");
 
         for (int j=0; j< arrayel.length;j++){
+            System.out.println("Inserisci un numero da 1 a 5 per eseguire il file Multimediale 0 zero per uscire");
             int selected = input.nextInt();
             if (selected == 0){
                 return;

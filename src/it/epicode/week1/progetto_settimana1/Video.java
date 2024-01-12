@@ -2,7 +2,7 @@ package it.epicode.week1.progetto_settimana1;
 
 public class Video extends PlayerMultimediale implements Riproducible{
     private int luminosita = 8;
-    private int volume;
+    private int volume = 5;
     public Video(String titolo){
         super(titolo);
     }
