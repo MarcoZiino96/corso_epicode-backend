@@ -38,7 +38,7 @@ public class Esecuzione{
         int scelta;
         String titolo;
 
-        System.out.println("Benvenuto nel mio lettore multimediale");
+        System.out.println("Benvenuto nel mio programma: il mio lettore multimediale");
 
 
         for (int i = 0; i < arrayel.length; i++) {
