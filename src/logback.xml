@@ -6,7 +6,7 @@
             <pattern>%-4relative [%thread] %-5level %logger{35} -%kvp- %msg %n</pattern>
         </encoder>
     </appender>
-    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <appender name="FILE_ERROR" class="ch.qos.logback.core.FileAppender">
         <!-- "application-name" is a variable -->
         <File>c:/logs/corso_epicode.log</File>
         <append>true</append>
@@ -50,6 +50,13 @@
     <logger name="prova" level="WARN" additivity="false">
         <appender-ref ref="STDOUT" />
     </logger>
+    <logger name="esercizio1" level="error" additivity="false">
+        <appender-ref ref="FILE_ERROR" />
+    </logger>
+    <logger name="esercizio2" level="error" additivity="false">
+        <appender-ref ref="FILE_ERROR" />
+    </logger>
+
     <root level="info">
         <appender-ref ref="FILE"/>
     </root>
