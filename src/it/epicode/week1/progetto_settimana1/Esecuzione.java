@@ -7,7 +7,7 @@ public class Esecuzione{
 
     public static void main(String[] args) {
 
-        // prova metodi delle sottoclassi
+        // testo i metodi delle sottoclassi
 
         Immagine img = new Immagine("sole splendente");
         img.print();
@@ -31,6 +31,7 @@ public class Esecuzione{
 
 
 
+
         PlayerMultimediale[] arrayel = new PlayerMultimediale[5];
 
         Scanner input = new Scanner(System.in);
@@ -44,7 +45,7 @@ public class Esecuzione{
         for (int i = 0; i < arrayel.length; i++) {
 
             do {
-            System.out.println("inserisci un numero per sceglie il tipo di elemento multimegliale: 1-Immagine; 2-Video; 3-audio");
+            System.out.println("inserisci un numero per scegliere il tipo di elemento multimediale: 1-Immagine; 2-Video; 3-audio");
             scelta = input.nextInt();
 
             if (scelta == 0 || scelta > 3){

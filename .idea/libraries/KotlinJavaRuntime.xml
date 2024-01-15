@@ -1,6 +1,9 @@
 <component name="libraryTable">
   <library name="KotlinJavaRuntime" type="repository">
     <properties maven-id="org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0" />
+    <ANNOTATIONS>
+      <root url="file://$USER_HOME$/OneDrive/Desktop/logger" />
+    </ANNOTATIONS>
     <CLASSES />
     <JAVADOC />
     <SOURCES />
