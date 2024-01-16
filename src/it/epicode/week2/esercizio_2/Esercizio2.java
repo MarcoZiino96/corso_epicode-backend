@@ -11,6 +11,10 @@ public class Esercizio2 {
         int number = input.nextInt();
          ArrayList<Integer> list = creaListRandom(number);
         System.out.println(list);
+        System.out.println(listAddReverseList(list));
+        pariDispari(list, true);
+        pariDispari(list, false);
+
     }
 
     public static ArrayList<Integer> creaListRandom(int n){
@@ -24,11 +28,29 @@ public class Esercizio2 {
        return listRandom;
     }
 
-    public static ArrayList<Integer> lististAddReverseList(ArrayList<Integer> list){
+    public static ArrayList<Integer> listAddReverseList(ArrayList<Integer> list){
         ArrayList<Integer> listReverse = new ArrayList<>();
+        listReverse.addAll(list);
+        listReverse.addAll(list.reversed());
+        return listReverse;
+    }
 
-        listReverse = list.add(list.reversed());
-
+    public static void pariDispari(ArrayList<Integer> list,  boolean pari){
+        if (pari){
+            System.out.println("Numeri pari presenti nella lista");
+            for (int i=0; i < list.size();i++){
+                if(i % 2 == 0){
+                    System.out.println(list.get(i));
+                }
+            }
+        }else{
+            System.out.println("Numeri dispari presenti nella lista");
+            for (int i=0; i < list.size();i++){
+                if(i % 2 != 0){
+                    System.out.println(list.get(i));
+                }
+            }
+        }
     }
 
 }
