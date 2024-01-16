@@ -24,6 +24,10 @@ public class Esercizio2 {
         }catch (ArithmeticException e){
             logger.error("é stata effetuata una divisone per 0");
         }
+        if (l == 0){
+            System.out.println("non puoi inserire zero");
+        }
+
 
 
     }
