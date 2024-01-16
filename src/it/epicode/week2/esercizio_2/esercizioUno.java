@@ -17,25 +17,15 @@ public class esercizioUno {
         System.out.println("Scrivi un numero di quante parola vuoi inserire");
         int i = input.nextInt();
 
-
-
-
         for (int j=0; j<i;j++){
             System.out.println("inserisci una parola");
             String parola = input.nextLine();
-            if(!inputStringHasSet.contains(parola)){
+            if (!inputStringHasSet.add(parola)){
                 duplicateParole.add(parola);
-
-            } else if (!inputStringHasSet.contains(parola)) {
-                inputStringHasSet.add(parola);
-            }
-            {
-                inputStringHasSet.add(parola);
             }
         }
-
-        System.out.println(duplicateParole);
-        System.out.println(inputStringHasSet.size());
-        System.out.println(inputStringHasSet);
+        System.out.println("Parole duplicate"+duplicateParole);
+        System.out.println("Numero parole distinte " + inputStringHasSet.size());
+        System.out.println("Parole distinte"+inputStringHasSet);
     }
 }
