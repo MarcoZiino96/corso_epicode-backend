@@ -17,11 +17,13 @@ public class esercizioUno {
         System.out.println("Scrivi un numero di quante parola vuoi inserire");
         int i = input.nextInt();
 
-        for (int j=0; j<i;j++){
+        for (int j=0; j<=i;j++){
             System.out.println("inserisci una parola");
             String parola = input.nextLine();
             if (!inputStringHasSet.add(parola)){
                 duplicateParole.add(parola);
+            }else{
+                inputStringHasSet.add(parola);
             }
         }
         System.out.println("Parole duplicate"+duplicateParole);
