@@ -1,4 +1,4 @@
-select * from public.fatture
+	select * from public.fatture
 	select * from public.clienti
 	select * from public.fornitori
 	select * from public.prodotti
@@ -20,7 +20,7 @@ select * from public.fatture
 	where iva = 20
 	group by extract(year from datafattura);
 
-	select count(*), sum(importo), extract(year from datafattura) anno
+	select count(*), sum(importo), extract(year from datafattura)anno
 	from public.fatture
 	group by extract anno;
 
@@ -30,13 +30,16 @@ select * from public.fatture
 	group by anno
 	having count(*)>2;
 
-	select sum(importo),nome,cognome
+	select sum(importo),regioneresidenza
 	from public.fatture inner join public.clienti
 	on idcliente=numerocliente
-	group by clienti.regioneresidenza;
+	group by regioneresidenza;
 
-	select count(distinct numeroclienti)
-	from public.fatture inner joinpublic.clienti
-	on id_cliente = numerocliente
-	where annodinascita=1980 and importo>50;
+	select count(distinct numerocliente)
+    from public.fatture inner join public.clienti
+    on idcliente=numerocliente
+    where annodinascita=1980 and importo>50;
+
+
+
 
