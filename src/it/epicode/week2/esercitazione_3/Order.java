@@ -9,12 +9,19 @@ public class Order {
     private LocalDate localdate;
 
     private LocalDate deliveryDate;
-    private ArrayList<Product> products;
+    private ArrayList<Product> products = new ArrayList<>();
     private Costumer costumer;
 
-    public void setProducts(ArrayList<Product> products) {
-
-        this.products = products;
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", status='" + status + '\'' +
+                ", localdate=" + localdate +
+                ", deliveryDate=" + deliveryDate +
+                ", products=" + products +
+                ", costumer=" + costumer +
+                '}';
     }
 
     public Order(int id, String status, LocalDate localDate, LocalDate deliveryDate, Costumer costumer){
@@ -48,6 +55,11 @@ public class Order {
     public void removeProduct(Product product){
         products.remove(product);
     }
+
+    public ArrayList<Product> getProducts() {
+        return products;
+    }
+
     public void addProduct (Product product){
         products.add(product);
     }

@@ -1,0 +1,11 @@
+select * from public.fatture
+	select * from public.clienti
+	select * from public.fornitori
+	select * from public.prodotti
+
+	select * from public.clienti where nome = 'mario';
+	select nome, cognome from public.clienti where annoDiNascita = '1982';
+	select * from public.fatture where iva = 20;
+	select *
+    from public.prodotti where extract(year from "dataattivazione") = 2017;
+	end (inproduzione = true or incommercio = true);

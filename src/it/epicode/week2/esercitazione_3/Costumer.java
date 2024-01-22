@@ -35,4 +35,13 @@ public class Costumer {
     public void setTier(int tier) {
         this.tier = tier;
     }
+
+    @Override
+    public String toString() {
+        return "Costumer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", tier=" + tier +
+                '}';
+    }
 }
